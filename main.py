@@ -1,26 +1,22 @@
+
+import boto3
 import os
-from google.cloud import storage
 
-# Set the path to your JSON key file (replace with the actual path)
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "C:\dev\Projects\NASASpaceAppHackathon\myspaceapp-401320-f3e0c5007d1a.json"
+# Replace these with your own AWS credentials and S3 bucket name
+aws_access_key_id = 'AKIA4EJGH4Q2HOJ4DYCU'
+aws_secret_access_key = 'K+hX1sq+AFut9vGJ1gzuDGszATAtvjV2qbFWQneC'
+bucket_name = 'my-space-app-hackathon'
+dataset_file_path = r'C:\dev\Projects\NASASpaceAppHackathon\NASA_SpaceAppChallenge\dummy_data\FruitPrices2020.csv'
+s3_object_key = 'FruitPrices2020.csv'  # The name you want to give to the dataset in S3
 
-# Initialize a client
-client = storage.Client()
 
-# Set your bucket name
-bucket_name = "myspaceapp"
 
-# Specify the local file you want to upload
-local_file_path = "C:\dev\Projects\NASASpaceAppHackathon\NASA_SpaceAppChallenge\dummy_data\CPIForecast.csv"
+# Create an S3 client
+s3 = boto3.client('s3', aws_access_key_id=aws_access_key_id, aws_secret_access_key=aws_secret_access_key)
 
-# Specify the destination object name (key) in the bucket
-destination_blob_name = "destination/CPIForecast.csv"
-
-# Get a reference to the bucket
-bucket = client.get_bucket(bucket_name)
-
-# Upload the file to Google Cloud Storage
-blob = bucket.blob(destination_blob_name)
-blob.upload_from_filename(local_file_path)
-
-print(f"File {local_file_path} uploaded to {bucket_name}/{destination_blob_name}")
+# Upload the dataset file to S3
+try:
+    s3.upload_file(dataset_file_path, bucket_name, s3_object_key)
+    print(f"Upload successful: {dataset_file_path} to s3://{bucket_name}/{s3_object_key}")
+except Exception as e:
+    print(f"Upload failed: {str(e)}")
