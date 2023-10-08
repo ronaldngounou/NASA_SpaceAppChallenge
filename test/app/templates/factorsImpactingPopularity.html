@@ -3,11 +3,45 @@
 {% block content %}
 
 <div class="dashboard-container">
-    <iframe allowfullscreen class="dashboard-iframe"
+    <table border="1" class="dataframe">
+        <thead>
+          <tr style="text-align: right;">
+            <th></th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>url</th>
+            <td>https://storage.googleapis.com/myspaceapp/CPIForecast.csv</td>
+            <td>https://storage.googleapis.com/myspaceapp/FeedGrains.csv</td>
+            <td>https://storage.googleapis.com/myspaceapp/Fruit%20Prices%202020.csv</td>
+            <td>https://storage.googleapis.com/myspaceapp/SSURGO%202.3.2%20Data%20Dictionary_0.csv</td>
+          </tr>
+          <tr>
+            <th>desc</th>
+            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis eros id leo accumsan maximus. Mauris accumsan, tellus sed accumsan sagittis, nisl dui elementum sem, at dictum nibh ex at sapien. Integer mattis nulla vitae nisi porta, id convallis diam suscipit. Nulla ut laoreet magna, non commodo nibh. In id nisi lorem. Donec sit amet diam tincidunt, venenatis mi vitae, commodo orci. Proin risus dolor, aliquet id ex nec, vestibulum varius eros.</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis eros id leo accumsan maximus. Mauris accumsan, tellus sed accumsan sagittis, nisl dui elementum sem, at dictum nibh ex at sapien. Integer mattis nulla vitae nisi porta, id convallis diam suscipit. Nulla ut laoreet magna, non commodo nibh. In id nisi lorem. Donec sit amet diam tincidunt, venenatis mi vitae, commodo orci. Proin risus dolor, aliquet id ex nec, vestibulum varius eros.</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis eros id leo accumsan maximus. Mauris accumsan, tellus sed accumsan sagittis, nisl dui elementum sem, at dictum nibh ex at sapien. Integer mattis nulla vitae nisi porta, id convallis diam suscipit. Nulla ut laoreet magna, non commodo nibh. In id nisi lorem. Donec sit amet diam tincidunt, venenatis mi vitae, commodo orci. Proin risus dolor, aliquet id ex nec, vestibulum varius eros.</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis eros id leo accumsan maximus. Mauris accumsan, tellus sed accumsan sagittis, nisl dui elementum sem, at dictum nibh ex at sapien. Integer mattis nulla vitae nisi porta, id convallis diam suscipit. Nulla ut laoreet magna, non commodo nibh. In id nisi lorem. Donec sit amet diam tincidunt, venenatis mi vitae, commodo orci. Proin risus dolor, aliquet id ex nec, vestibulum varius eros.</td>
+          </tr>
+          <tr>
+            <th>source</th>
+            <td>https://www.ers.usda.gov/webdocs/DataFiles/50673/CPIForecast.xlsx?v=7836.9</td>
+            <td>https://google.com</td>
+            <td>https://www.ers.usda.gov/webdocs/DataFiles/51035/Fruit%20Prices%202020.csv?v=3053.8</td>
+            <td>https://data.nal.usda.gov/system/files/SSURGO%202.3.2%20Data%20Dictionary_0.csv</td>
+          </tr>
+        </tbody>
+      </table>
+    <!-- <iframe allowfullscreen class="dashboard-iframe"
     frameborder="0"
     src="https://datastudio.google.com/embed/reporting/963b908d-5a43-4e8b-bb2a-9db323369f56/page/u7SfC"
     style="border:0">
-    </iframe>
+    </iframe> -->
 </div>
 
 {% endblock %}

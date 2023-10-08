@@ -9,14 +9,70 @@
 </div>
 
 <div class="jumbotron vertical-center-2">
-      <div class="container text-center">
+	<div>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.js"></script>
+
+<table border="1" class="dataframe display" id="my_table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Column Name</th>
+      <th>Visual</th>
+      <th>Summary Statistics</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>SC_Group_ID</td>
+      <td><img src="SC_Group_ID_visual.png" alt="SC_Group_ID visual"></td>
+      <td>count    501674.000000<br>mean          2.893369<br>std           0.713289<br>min           1.000000<br>25%           3.000000<br>50%           3.000000<br>75%           3.000000<br>max           7.000000<br>Name: SC_Group_ID, dtype: float64</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>SC_Group_Desc</td>
+      <td><img src="SC_Group_Desc_visual.png" alt="SC_Group_Desc visual"></td>
+      <td>Exports and imports    437730<br>Prices                  32095<br>Supply and use          21535<br>Feed-price ratios        4807<br>Quantities fed           3062<br>Animal unit indexes      1372<br>Transportation           1073<br>Name: SC_Group_Desc, dtype: int64</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>SC_GroupCommod_ID</td>
+      <td><img src="SC_GroupCommod_ID_visual.png" alt="SC_GroupCommod_ID visual"></td>
+      <td>count    494422.000000<br>mean         12.543768<br>std           3.109998<br>min           8.000000<br>25%          10.000000<br>50%          12.000000<br>75%          12.000000<br>max          20.000000<br>Name: SC_GroupCommod_ID, dtype: float64</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>SC_GroupCommod_Desc</td>
+      <td><img src="SC_GroupCommod_Desc_visual.png" alt="SC_GroupCommod_Desc visual"></td>
+      <td>Corn                    242786<br>Barley                  107974<br>Oats                     81082<br>Sorghum                  25728<br>Byproduct feeds          23509<br>Hay                       3774<br>Feed grains               2640<br>Grain protein feeds       2312<br>Animal protein feeds      2062<br>Oilseed meal feeds        1012<br>Coarse grains              693<br>Processed feeds            544<br>Energy feeds               306<br>Name: SC_GroupCommod_Desc, dtype: int64</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>SC_Geography_ID</td>
+      <td><img src="SC_Geography_ID_visual.png" alt="SC_Geography_ID visual"></td>
+      <td>count    501674.000000<br>mean         87.736586<br>std          80.642279<br>min           1.000000<br>25%          30.000000<br>50%          51.000000<br>75%         129.000000<br>max         340.000000<br>Name: SC_Geography_ID, dtype: float64</td>
+    </tr>
+  </tbody>
+</table>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+      $('#my_table').DataTable();
+  } );
+  </script>
+	</div>
+	
+      <!-- <div class="container text-center">
       		<h3 style="color: #c4302b;">Are you a content creator? Know what videos are trending in your region... </h3><br>
 			For a novice content creator, he needs to know its audiences as it requires 1,000 subscribers and 4,000 hours of watch time on their channel to start generating revenue from youtube.
 			<br><br><br>
 			<h3 style="color: #c4302b;">Promoting products with YouTube ads? Know which video to ask for...</h3><br>
 
 			The charge for a single advertisement on youtube lies between  $0.10 to $0.30 per view or action, with an average $10 daily budget and no upper limit. A company would want to target the most number of viewers with their ad with a single video.
-	</div>
+	</div> -->
 </div>
 
 {% endblock %}
