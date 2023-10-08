@@ -1,6 +1,3 @@
-import os
-from google.cloud import storage
-
 
 import boto3
 import os
@@ -9,8 +6,8 @@ import os
 aws_access_key_id = 'AKIA4EJGH4Q2HOJ4DYCU'
 aws_secret_access_key = 'K+hX1sq+AFut9vGJ1gzuDGszATAtvjV2qbFWQneC'
 bucket_name = 'my-space-app-hackathon'
-dataset_file_path = 'C:\dev\Projects\NASASpaceAppHackathon\NASA_SpaceAppChallenge\dummy_data\CPIForecast.csv'
-s3_object_key = 'CPIForecast.csv'  # The name you want to give to the dataset in S3
+dataset_file_path = r'C:\dev\Projects\NASASpaceAppHackathon\NASA_SpaceAppChallenge\dummy_data\FruitPrices2020.csv'
+s3_object_key = 'FruitPrices2020.csv'  # The name you want to give to the dataset in S3
 
 
 
