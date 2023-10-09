@@ -22,7 +22,7 @@ Tools used:
     Tableau
     render.com
 
-As of our prototype, we haven't implemented artificial intelligence. However, it's in the pipeline. We determined that natural language, semantic analysis of datasets could make sorting through untold results easier and faster. That would be confirmed or otherwise in prototyping and user research/feedback. The Cameroonianauts collectively have decided to go lightweight first without immediately tacking on a new layer.
+As of our prototype, we haven't implemented artificial intelligence. However, it's in the pipeline. We determined that natural language, semantic analysis of datasets could make sorting through untold results easier and faster. That would be confirmed or otherwise in prototyping and user research/feedback. The Cameroonionauts collectively have decided to go lightweight first without immediately tacking on a new layer.
 ## Demo Video ##
 [Watch a demo](https://youtu.be/oupZIneJzl4?si=ewoqFXbj7z9YqSix)
 
