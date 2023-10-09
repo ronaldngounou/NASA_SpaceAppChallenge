@@ -1,0 +1,9 @@
+*.pdf
+*.zip
+*.csv
+venv
+dataread
+reading_csv.py
+Heroku
+DummyData
+.ipynb_checkpoints
