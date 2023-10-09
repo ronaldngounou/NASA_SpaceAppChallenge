@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<div class="vertical-center-1">
+	<div class="container text-center"> 
+		<form action="/search" method="post">
+			<input type="text" name="query" placeholder="Search">
+			<input type="submit" value="Search">
+		</form>
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for result in results %}
+					<tr>
+						<td>{{ result.name }}</td>
+						<td>{{ result.desc }}</td>
+						<td><a href="{{ url_for('new_route', id=result.iid) }}" class="btn">Inspect</a></td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div class="jumbotron vertical-center-2">
+	<div>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.js"></script>
+
+	
+
+</div>
+
+{% endblock %}
